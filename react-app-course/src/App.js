@@ -1,6 +1,10 @@
+import React, { useState } from 'react';
+
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpenses/NewExpense";
 
 function App() {
+
   const expenses = [
     {
       id: 'e1',
@@ -21,10 +25,16 @@ function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ];
+  ]; 
+
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log([...expenses, expense]);
+  };
 
   return (
     <div>
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses expenses={expenses} />
     </div>
   );
