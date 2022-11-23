@@ -20,7 +20,12 @@
     width: 20rem;
     max-width: 100%;
   }
-  
-  .new-expense__actions {
-    text-align: right;
+
+  .new-expense__buttons {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .add-new-expense__actions {
+    text-align: center;
   }
