@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-function ExpenseForm({onSaveExpenseDate}) {
+function ExpenseForm({ onSaveExpenseDate }) {
   // const [enteredTitle, setEnteredTitle] = useState('');
   // const [enteredAmount, setEnteredAmount] = useState('');
   // const [enteredDate, setDate] = useState('');
@@ -11,6 +11,7 @@ function ExpenseForm({onSaveExpenseDate}) {
     enteredAmount: "",
     enteredDate: "",
   });
+  const [showNewExpenseForm, setShowNewExpenseForm] = useState(true);
 
   const titleChangeHandler = (e) => {
     // setUserInput({
@@ -63,11 +64,31 @@ function ExpenseForm({onSaveExpenseDate}) {
     onSaveExpenseDate(newExpense);
 
     setUserInput({
-        enteredAmount: '',
-        enteredTitle: '',
-        enteredDate: '',
+      enteredAmount: "",
+      enteredTitle: "",
+      enteredDate: "",
     });
   };
+
+  const showNewExpenseFormHandler = (e) => {
+    e.preventDefault();
+    setShowNewExpenseForm(true);
+  };
+
+  const cancelHandler = (e) => {
+    e.preventDefault();
+    setShowNewExpenseForm(false);
+  };
+
+  if (!showNewExpenseForm) {
+    return (
+      <form onSubmit={showNewExpenseFormHandler}>
+        <div className="add-new-expense__actions">
+          <button type="submit">Add New Expense</button>
+        </div>
+      </form>
+    );
+  }
 
   return (
     <form onSubmit={submitHandler}>
@@ -103,9 +124,9 @@ function ExpenseForm({onSaveExpenseDate}) {
           />
         </div>
       </div>
-
-      <div className="new-expense__actions">
+      <div className="new-expense__buttons">
         <button type="submit">Add expense</button>
+        <button onClick={cancelHandler}>Cancel</button>
       </div>
     </form>
   );

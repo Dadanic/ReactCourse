@@ -2,11 +2,11 @@ import React from "react";
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
-function NewExpense({onAddExpense}) {
+function NewExpense({ onAddExpense }) {
   const onSaveExpenseDateHandler = (eneteredExpenseData) => {
     const expenseDate = {
-        ...eneteredExpenseData,
-        id: Math.random().toString()
+      ...eneteredExpenseData,
+      id: Math.random().toString(),
     };
     onAddExpense(expenseDate);
     console.log("omar");
