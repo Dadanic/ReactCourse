@@ -11,7 +11,7 @@ function ExpenseForm({onSaveExpenseDate}) {
     enteredAmount: "",
     enteredDate: "",
   });
-  const [showNewExpenseForm, setShowNewExpenseForm] = useState(true);
+  const [showNewExpenseForm, setShowNewExpenseForm] = useState(false);
 
   const titleChangeHandler = (e) => {
     // setUserInput({
