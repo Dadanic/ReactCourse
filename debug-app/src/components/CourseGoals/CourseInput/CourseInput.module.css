@@ -23,13 +23,11 @@
   border-color: #8b005d;
 }
 
-.input__invalid-text {
-  color: #ff0000;
-  font-weight: 100;
-  font-size: 0.8rem;
+.form-control.invalid input {
+  border-color: red;
+  background: #ffd7d7;
 }
 
-.input__invalid-style {
-  border-color: #ff0000;
-  background-color: salmon;
+.form-control.invalid label {
+  color: red;
 }
