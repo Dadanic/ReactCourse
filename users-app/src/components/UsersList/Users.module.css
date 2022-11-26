@@ -1,0 +1,10 @@
+.users {
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 3rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    max-width: 95%;
+    border-radius: 12px;
+  }
