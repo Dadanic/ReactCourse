@@ -1,11 +1,12 @@
 .input {
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   width: 90%;
   max-width: 40rem;
 }
 
 .input label {
+  margin-top: 1rem;
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -17,10 +18,14 @@
   width: 100%;
   border: 1px solid #ccc;
   padding: 0.15rem;
-  margin-bottom: 0.5rem;
 }
 
 .input input:focus {
   outline: none;
   border-color: #4f005f;
+}
+
+.invalid-box {
+  border: 1px solid red !important;
+  background-color: salmon;
 }

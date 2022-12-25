@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../UI/Card";
 import styles from './Users.module.css'
 
 import UsersList from './UsersList';
@@ -6,9 +7,9 @@ import UsersList from './UsersList';
 
 function Users(props) {
     return(
-        <div className={styles.users}>
+        <Card className={styles.input}>
             <UsersList usersList={props.users} />
-        </div>
+        </Card>
     );
 };
 
